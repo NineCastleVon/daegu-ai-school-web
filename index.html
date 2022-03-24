@@ -3,27 +3,26 @@
     <head>
         <title>WEB1 - Welcome</title>
         <meta charset="utf-8">
-            <style>
-                h1{
-                    border-bottom:10px solid red;
-                    padding: 30px;
-                }
-            </style>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1><a href="index.html">WEB</a></h1>
             <input type="button" value="night" onclick="
-            document.querySelector('body').style.color='white';
-            document.querySelector('body').style.backgroundColor='black';
-            ">
-            <input type="button" value="day" onclick="
-            document.querySelector('body').style.color='black';
-            document.querySelector('body').style.backgroundColor='white';
-            ">
+                let button=this;
+                    if(button.value==='night'){
+                        document.querySelector('body').style.backgroundColor='black';
+                        document.querySelector('body').style.color='white';
+                        button.value='day'
+                    }else{               
+                        document.querySelector('body').style.backgroundColor='white';
+                        document.querySelector('body').style.color='black';
+                        button.value='night'
+                }
+        ">               
             <ol>
-                <li>-<a href="1.html"target"_blank">HTML</a></li>
-                <li>-<a href="2.html"_blank">CSS</a></li>
-                <li>-<a href="3.html"target"_blank">JavaScript</a></li>
+                <li>-<a href="1.html" target"_blank">HTML</a></li>
+                <li>-<a href="2.html" target"_blank">CSS</a></li>
+                <li>-<a href="3.html" target"_blank">JavaScript</a></li>
             </ol>
 
     Welcome! Hello WEB<br>
