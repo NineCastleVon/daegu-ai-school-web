@@ -6,19 +6,34 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1><a href="index.html">WEB</a></h1>
-            <input type="button" value="night" onclick="
-                let button=this;
-                    if(button.value==='night'){
-                        document.querySelector('body').style.backgroundColor='black';
-                        document.querySelector('body').style.color='white';
-                        button.value='day'
-                    }else{               
-                        document.querySelector('body').style.backgroundColor='white';
-                        document.querySelector('body').style.color='black';
-                        button.value='night'
+        <script>
+            function night() {
+                document.querySelector('body').style.backgroundColor = 'black';
+                document.querySelector('body').style.color = 'white';
+                let as = document.querySelectorAll('a');
+                for(let i=0;i<as.length;i=i+1){
+                    as[i].style.color = 'white';
                 }
-        ">               
+            }
+            function day(){
+                document.querySelector('body').style.backgroundColor = 'white';
+                document.querySelector('body').style.color = 'black';
+                let as = document.querySelectorAll('a');
+                for(let i=0;i<as.length;i=i+1){
+                    as[i].style.color = 'black';
+                }
+            }
+        </script>
+        <input type="button" value="night" onclick="
+            let btn = this;
+            if(btn.value === 'night'){
+                night();
+                btn.value = 'day';
+            } else {
+                day();
+                btn.value = 'night';
+            }
+        ">
             <ol>
                 <li>-<a href="1.html" target"_blank">HTML</a></li>
                 <li>-<a href="2.html" target"_blank">CSS</a></li>
