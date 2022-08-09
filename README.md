@@ -1,2 +1,2 @@
 # daegu-ai-school-web
-May 17th, cafe hmtl
+May 17th, make introduce cafe hmtl
